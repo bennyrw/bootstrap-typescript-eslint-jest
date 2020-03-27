@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap-typescript-eslint-jest",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.2.3",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "lint": "eslint src/**",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "author": "bennyrw"
+}
